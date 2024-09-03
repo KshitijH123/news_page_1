@@ -18,6 +18,13 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void _navigateToNewPage() {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => const NewPage()),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,13 +43,18 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+            const SizedBox(height: 20), // Add some spacing
+            ElevatedButton(
+              onPressed: _navigateToNewPage,
+              child: const Text('Go to New Page'),
+            ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add_outlined),
       ),
     );
   }
