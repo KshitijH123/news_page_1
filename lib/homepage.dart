@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_page_1/new_page.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -43,7 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            const SizedBox(height: 20), // Add some spacing
+            const SizedBox(height: 20), 
             ElevatedButton(
               onPressed: _navigateToNewPage,
               child: const Text('Go to New Page'),
